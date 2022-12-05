@@ -7,14 +7,17 @@ public class OwingPrinter {
     void printOwing(String name, List<Order> orders) {
         int outstanding = calculateOutstanding(orders);
 
-        // print banner
-        System.out.println ("*****************************");
-        System.out.println ("****** Customer totals ******");
-        System.out.println ("*****************************");
+        printBanner();
 
         // print details
         System.out.println("name: " + name);
         System.out.println("amount: " + outstanding);
+    }
+
+    private void printBanner() {
+        System.out.println ("*****************************");
+        System.out.println ("****** Customer totals ******");
+        System.out.println ("*****************************");
     }
 
     private int calculateOutstanding(List<Order> orders) {
