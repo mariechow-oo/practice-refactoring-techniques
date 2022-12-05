@@ -5,9 +5,7 @@ import java.util.List;
 public class OwingPrinter {
     void printOwing(String name, List<Order> orders) {
         int outstanding = calculateOutstanding(orders);
-
         printBanner();
-
         printDetails(name, outstanding);
     }
 
